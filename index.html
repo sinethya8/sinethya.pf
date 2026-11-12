@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sinethya Liyanage | Computer Science Undergraduate</title>
+<meta name="description" content="Portfolio of Sinethya Liyanage, Computer Science undergraduate at NSBM Green University. Cloud, DevOps and UI/UX.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff5fa;--ink:#3b2346;--soft:#7a5f86;--pink:#ff7eb6;--rose:#ffc2dd;--lav:#c9b6ff;--lav2:#efe7ff;--card:rgba(255,255,255,.66);--line:rgba(255,126,182,.28);--glow:0 10px 34px rgba(255,126,182,.25);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1226;--ink:#fbeaf5;--soft:#cdb4d9;--card:rgba(255,255,255,.07);--line:rgba(255,126,182,.35);--lav2:#2b1d3c}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:Quicksand,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(40vw 40vw at 10% 10%,var(--rose),transparent 70%),radial-gradient(45vw 45vw at 95% 30%,var(--lav),transparent 70%),radial-gradient(35vw 35vw at 40% 100%,var(--rose),transparent 70%);opacity:.55;z-index:-2;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.12) translate(-2%,2%)}}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.15}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:.4rem}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.2rem;padding-top:calc(.7rem + env(safe-area-inset-top,0px));background:var(--card);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{font-family:Fraunces,serif;font-size:1.25rem;text-decoration:none;font-weight:600}
+nav ul{display:flex;gap:.2rem;list-style:none;margin:0;padding:0}
+nav a.l{display:block;padding:.35rem .75rem;border-radius:99px;text-decoration:none;font-weight:600;font-size:.92rem;transition:.25s}
+nav a.l:hover,nav a.l.on{background:var(--pink);color:#fff}
+#burger{display:none;background:none;border:0;font-size:1.6rem;color:var(--ink);cursor:pointer}
+@media(max-width:900px){#burger{display:block}nav ul{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:.6rem 1rem;max-height:0;overflow:hidden;opacity:0;transition:.3s;pointer-events:none}nav ul.open{max-height:520px;opacity:1;pointer-events:auto}}
+section{padding:5.5rem 1.2rem 1rem;max-width:1080px;margin:auto}
+.sub{color:var(--soft);margin:0 0 1.8rem}
+.glass{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:26px;padding:1.4rem;box-shadow:var(--glow)}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.3rem;border-radius:99px;border:1.5px solid var(--pink);background:transparent;color:var(--ink);font:700 .95rem Quicksand;text-decoration:none;cursor:pointer;transition:.25s}
+.btn.pri{background:linear-gradient(135deg,var(--pink),#b38cff);color:#fff;border-color:transparent;box-shadow:var(--glow)}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--lav);outline-offset:2px}
+/* hero */
+#home{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;padding-top:6rem}
+@media(max-width:800px){#home{grid-template-columns:1fr;text-align:center}#home .row{justify-content:center}.photo{order:-1;max-width:290px;margin:auto}}
+.hi{font-weight:700;color:var(--pink)}
+h1{font-size:clamp(2.6rem,7vw,4.6rem)}
+h1 span{display:inline-block;animation:pop .7s both cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{from{opacity:0;transform:translateY(40px) rotate(-8deg) scale(.6)}}
+.typed{font-size:1.25rem;font-weight:700;min-height:2rem}.typed::after{content:"|";animation:blink 1s infinite;color:var(--pink)}
+@keyframes blink{50%{opacity:0}}
+.row{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0}
+.photo{position:relative;animation:rise 1s .3s both}
+@keyframes rise{from{opacity:0;transform:scale(.85) rotate(4deg)}}
+.photo .frame{border-radius:46% 46% 30px 30px/38% 38% 30px 30px;overflow:hidden;border:6px solid #fff;box-shadow:0 0 0 3px var(--pink),0 20px 50px rgba(255,126,182,.4);aspect-ratio:3/4}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}.photo:hover img{transform:scale(1.06)}
+.badge{position:absolute;padding:.4rem .8rem;border-radius:99px;background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);font-weight:700;font-size:.85rem;box-shadow:var(--glow);animation:bob 4s ease-in-out infinite}
+.b1{top:8%;left:-10%}.b2{bottom:14%;right:-8%;animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.scroll{margin-top:1.5rem;font-size:.85rem;color:var(--soft)}
+/* floating AI bling */
+#bling{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+#bling i{position:absolute;font-style:normal;animation:float var(--d) ease-in-out infinite,shake var(--s) ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(255,126,182,.4))}
+@keyframes float{50%{translate:0 -26px}}
+@keyframes shake{0%,70%,100%{rotate:0deg;scale:1}74%{rotate:-14deg;scale:1.25}78%{rotate:14deg}82%{rotate:-12deg}86%{rotate:10deg}90%{rotate:-6deg;scale:1.1}}
+.spark{position:fixed;pointer-events:none;z-index:30;animation:burst .8s forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(0) rotate(200deg);opacity:0}}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.in{opacity:1;transform:none}
+/* about */
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.chip{padding:.3rem .8rem;border-radius:99px;background:var(--lav2);border:1px solid var(--line);font-weight:600;font-size:.88rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.2rem}
+.shots img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px;border:4px solid #fff;transition:.4s}.shots img:nth-child(odd){rotate:-2deg}.shots img:nth-child(even){rotate:2deg}.shots img:hover{rotate:0deg;scale:1.05}
+/* experience */
+.xp{display:flex;gap:1rem;align-items:flex-start}
+.mas{flex:none;width:64px;height:64px;border-radius:18px;background:var(--lav2);border:2px dashed var(--pink);display:grid;place-items:center;font-weight:700;font-size:.7rem;text-align:center;overflow:hidden}.mas img{width:100%;height:100%;object-fit:contain}
+details{border-top:1px solid var(--line);padding:.7rem 0}details:first-of-type{margin-top:1rem}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}summary::after{content:"+";color:var(--pink);font-size:1.3rem;line-height:1;transition:.3s}details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.4rem 0 0;color:var(--soft)}
+/* skills & cards */
+.card{transition:.3s}.card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 16px 40px rgba(179,140,255,.35)}
+.card h3{font-size:1.2rem;margin-bottom:.5rem}
+.empty{color:var(--soft);border-style:dashed}
+.tl{border-left:3px solid var(--pink);padding-left:1.3rem;display:grid;gap:1rem}
+.tl .glass{position:relative}.tl .glass::before{content:"";position:absolute;left:-1.95rem;top:1.5rem;width:14px;height:14px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px var(--rose)}
+.tl small{color:var(--soft);font-weight:700}
+/* contact */
+form{display:grid;gap:.8rem}
+input,textarea{width:100%;padding:.8rem 1rem;border-radius:16px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.err{color:#d6336c;font-size:.85rem;min-height:1.1rem}
+.note{font-size:.85rem;color:var(--soft)}
+footer{text-align:center;padding:3rem 1rem;color:var(--soft)}
+dialog{border:0;border-radius:24px;padding:0;max-width:min(92vw,900px);width:100%;background:var(--bg);color:var(--ink)}dialog::backdrop{background:rgba(59,35,70,.6);backdrop-filter:blur(4px)}
+dialog header{display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.2rem}
+
+.mq{overflow:hidden;margin:0 0 1.4rem;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq div{display:flex;gap:1rem;width:max-content;animation:scrollx 26s linear infinite}.mq:hover div{animation-play-state:paused}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+.lang{display:flex;flex-direction:column;align-items:center;gap:.35rem;padding:.9rem 1.1rem;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:var(--glow);font-weight:700;font-size:.85rem;min-width:96px;animation:hop 2.6s ease-in-out infinite;animation-delay:var(--w)}
+.lang svg{width:46px;height:46px}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px) rotate(3deg)}}
+.thumb{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:16px;border:1px solid var(--line);margin-bottom:.7rem;cursor:zoom-in}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}#bling i{animation:none}}
+</style></head>
+<body>
+<div id="bling" aria-hidden="true"></div>
+<nav aria-label="Main"><a class="logo" href="#home">Sinethya ✨</a>
+<button id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+<ul id="menu"></ul></nav>
+
+<main>
+<section id="home">
+<div>
+<div class="hi">Hi, I’m ✨</div>
+<h1 id="name" aria-label="Sinethya Liyanage"></h1>
+<p class="typed" id="typed"></p>
+<p style="max-width:34rem;color:var(--soft)">Computer Science undergraduate at NSBM Green University who loves software development, cloud technologies and UI/UX design.</p>
+<div class="row">
+<a class="btn pri" href="#cv">Download CV</a>
+<a class="btn" href="#projects">View My Projects</a>
+</div>
+<div class="row">
+<a class="btn" href="https://www.linkedin.com/in/sinethya-liyanage" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/sinethya8" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="mailto:sinethyaliyanage02@gmail.com">✉ Email me</a>
+</div>
+<div class="scroll">scroll down ↓</div>
+</div>
+<div class="photo">
+<div class="frame"><img src="assets/images/hero.jpg" alt="Portrait of Sinethya Liyanage in a white blazer" width="640" height="836"></div>
+<span class="badge b1">☁ Cloud &amp; DevOps</span><span class="badge b2">🎨 UI/UX</span>
+</div>
+</section>
+
+<section id="about"><h2 class="rv">About Me</h2><p class="sub rv">A little about the girl behind the code</p>
+<div class="glass rv"><p style="margin-top:0">Computer Science undergraduate at NSBM Green University with a strong interest in software development, cloud technologies, and UI/UX design. Successfully completed an internship at MAS, gaining practical industry experience in internal application management, Azure DevOps, CI/CD pipelines, and service connection configuration. Actively involved as an IEEE Secretary Team Member, demonstrating leadership, teamwork, and communication skills. A motivated and adaptable individual with strong problem-solving abilities, eager to apply technical knowledge, contribute to innovative IT solutions, and continue developing professional expertise.</p>
+<div class="chips" id="interests"></div>
+<div class="shots"><img src="assets/images/g1.jpg" alt="Sinethya outdoors in a lavender floral cardigan" loading="lazy"><img src="assets/images/g2.jpg" alt="Sinethya sitting on a pod chair" loading="lazy"><img src="assets/images/g3.jpg" alt="Sinethya standing by a wooden wall" loading="lazy"></div></div>
+</section>
+
+<section id="experience"><h2 class="rv">Professional Experience</h2><p class="sub rv">Tap a responsibility to open it</p>
+<div class="glass rv"><div class="xp"><div class="mas" id="mas">MAS logo here</div>
+<div><h3>Digital Team Intern</h3><div><b>MAS Holdings</b>, Sri Lanka</div><small class="note">27 July 2026 – 31 October 2026</small></div></div>
+<div id="duties"></div></div>
+</section>
+
+<section id="skills"><h2 class="rv">Technical Skills</h2><p class="sub rv">Taken from my CV. No ratings, just what I work with.</p><div class="mq" aria-label="Programming languages"><div id="langs"></div></div><div class="grid" id="skillGrid"></div></section>
+
+<section id="projects"><h2 class="rv">Academic &amp; Personal Projects</h2><p class="sub rv">Repository and demo links will appear here once added.</p><div class="grid" id="projGrid"></div></section>
+
+<section id="certifications"><h2 class="rv">Certifications &amp; Achievements</h2><p class="sub rv">Tap a card to open the full certificate.</p><div class="grid" id="certGrid"></div></section>
+
+<section id="education"><h2 class="rv">Education</h2><p class="sub rv">My learning journey</p><div class="tl" id="eduList"></div></section>
+
+<section id="leadership"><h2 class="rv">Leadership &amp; Activities</h2>
+<div class="glass rv"><h3>IEEE Secretary Team Member</h3><p class="sub" style="margin:.4rem 0 0">Leadership, teamwork, collaboration and communication through IEEE Student Branch and university activities.</p><div class="chips" id="acts"></div></div></section>
+
+<section id="cv"><h2 class="rv">My CV</h2>
+<div class="glass rv"><p style="margin-top:0">Download my latest CV or preview it here.</p>
+<div class="row"><a class="btn pri" href="assets/documents/cv.pdf" download>⬇ Download CV</a><a class="btn" href="assets/documents/cv.pdf" target="_blank" rel="noopener">View CV</a></div>
+<p class="note">The CV lives at <code>assets/documents/cv.pdf</code>. Replace that file and the buttons update with no code changes.</p></div></section>
+
+<section id="contact"><h2 class="rv">Let’s Connect</h2><p class="sub rv">Recruiters and teams, I’d love to hear from you.</p>
+<div class="grid"><div class="glass rv"><h3>Find me</h3><p><a href="mailto:sinethyaliyanage02@gmail.com">sinethyaliyanage02@gmail.com</a></p>
+<div class="row"><a class="btn" href="https://www.linkedin.com/in/sinethya-liyanage" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/sinethya8" target="_blank" rel="noopener">GitHub</a></div>
+<h3 style="margin-top:1rem">References</h3><p class="note">Referee details available on request. Add them in the data list when ready.</p></div>
+<form class="glass rv" id="f" novalidate><label>Name<input name="n" autocomplete="name"></label><div class="err" data-e="n"></div>
+<label>Email<input name="e" type="email" autocomplete="email"></label><div class="err" data-e="e"></div>
+<label>Subject<input name="s"></label><div class="err" data-e="s"></div>
+<label>Message<textarea name="m" rows="4"></textarea></label><div class="err" data-e="m"></div>
+<button class="btn pri" type="submit">Open in my email app</button>
+<p class="note" id="fn">This form isn’t connected to an email service yet, so nothing is sent from the website. After you check it, it opens your email app with the message ready to send.</p></form></div>
+</section>
+</main>
+<dialog id="dlg" aria-label="Certificate preview"><header><b id="dt"></b><button class="btn" id="dx">Close ✕</button></header><img id="di" alt="" style="width:100%;display:block"></dialog>
+<footer>Made with 💖 by Sinethya Liyanage</footer>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+const DATA={
+ titles:["Computer Science Undergraduate","Future Software Developer","Cloud & DevOps Explorer","UI/UX Design Enthusiast"],
+ interests:["Software development","Cloud technologies","UI/UX design","Leadership","Teamwork","Problem solving"],
+ duties:[
+  ["Internal Application Management & Maintenance","Assisted with maintaining internal business applications and supporting their day-to-day operations."],
+  ["Azure DevOps Pipeline Management","Supported the configuration and management of CI/CD pipelines for application deployment workflows."],
+  ["Azure DevOps Service Connections","Assisted in configuring secure connections between Azure DevOps pipelines and relevant services or environments."],
+  ["Microsoft SQL Server Administration","Supported database administration, routine maintenance, and backup operations."],
+  ["Database Backup & Data Archiving","Assisted with database backups and archiving historical data to support data retention and storage management."],
+  ["Microsoft Entra ID Management","Assisted with user administration and access management within the organization’s identity management environment."],
+  ["Microsoft Azure Portal Administration","Gained practical experience supporting cloud resource administration and reviewing resource configurations."],
+  ["Help Desk Application Maintenance & Upgrades","Assisted with help desk application maintenance and upgrades to support system functionality and operational efficiency."]],
+ masLogo:"assets/images/mas-logo.png",
+ skills:{ /* from your CV: add or remove freely */
+  "Programming":["Java","Python","C","C++","JavaScript","Programming & Problem Solving","Object-Oriented Programming (OOP)","Software Development Fundamentals"],
+  "Web Development":["HTML","CSS","JavaScript"],
+  "Databases":["SQL","Microsoft SQL Server (internship)"],
+  "Cloud & DevOps":["Azure DevOps CI/CD pipelines","Microsoft Azure Portal","Microsoft Entra ID"],
+  "Design & Tools":["UI/UX Design & Prototyping","Git & GitHub","System Analysis & Logical Thinking"]},
+ projects:[
+  {name:"BeeHive Management System",desc:"An IoT-based smart beehive monitoring system that tracks environmental conditions and supports efficient beekeeping. Built with a team: designed, developed and tested together.",tech:[],github:"",demo:""},
+  {name:"E-Med Tracker",desc:"A medicine tracking and management system that organizes medication records and improves monitoring efficiency. I designed user-friendly interfaces and helped with implementation and testing.",tech:[],github:"",demo:""},
+  {name:"Expense Tracker Application",desc:"A personal finance app for tracking expenses, managing budgets and generating financial insights.",tech:[],github:"",demo:""}],
+ langs:[["Java","#e76f00","J"],["Python","#3776ab","Py"],["C","#5c6bc0","C"],["C++","#00599c","C++"],["HTML","#e34f26","5"],["CSS","#1572b6","3"],["JavaScript","#f0c814","JS"]],
+ certs:[ /* add more: {title,org,date,file,link} */
+  {title:"Certificate of Appreciation: Student Volunteer, Outbound Training Programme (25.2 intake)",org:"NSBM Green University / NSBM Volunteer Club",date:"18 June 2025",file:"assets/certificates/nsbm-volunteer.jpg"},
+  {title:"Planning Your No-Code Website",org:"LinkedIn Learning",date:"10 Aug 2026",file:"assets/certificates/linkedin-no-code-website.jpg"},
+  {title:"Give Your AI Agent Skills",org:"LinkedIn Learning",date:"6 Aug 2026",file:"assets/certificates/linkedin-ai-agent-skills.jpg"}],
+ education:[
+  {t:"Prajapathi Girls’ College",d:"Ordinary Level: 6 As and 3 Bs",y:"2024"},
+  {t:"Foundation Programme, NSBM Green University",d:"9 As",y:"2024"},
+  {t:"Bachelor of Computer Science",d:"NSBM Green University, Sri Lanka. Undergraduate.",y:"2025 – 2027"}],
+ acts:["Competition participation","IEEE Student Branch Volunteer","Secretary Team Member","University Event Volunteer","Academic Project Coordinator","Student Community Engagement","UI/UX Design Contributor","University Club Volunteer"]
+};
+/* ===== SITE CODE ===== */
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const nav=[["home","Home"],["about","About"],["experience","Experience"],["skills","Skills"],["projects","Projects"],["certifications","Certifications"],["education","Education"],["contact","Contact"]];
+$("#menu").innerHTML=nav.map(([i,t])=>`<li><a class="l" href="#${i}" data-id="${i}">${t}</a></li>`).join("");
+$("#burger").onclick=()=>{const o=$("#menu").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+$("#menu").onclick=e=>{if(e.target.matches("a"))$("#menu").classList.remove("open")};
+$("#name").innerHTML="Sinethya Liyanage".split(" ").map((w,k)=>`<span style="animation-delay:${k*.25}s" aria-hidden="true">${[...w].map((c,j)=>`<span style="animation-delay:${k*.25+j*.05}s">${c}</span>`).join("")}</span> `).join("");
+let ti=0,ci=0,del=false;(function type(){const t=DATA.titles[ti];$("#typed").textContent=t.slice(0,ci);if(!del&&ci++==t.length){del=true;return setTimeout(type,1400)}if(del&&--ci<0){del=false;ci=0;ti=(ti+1)%DATA.titles.length}setTimeout(type,del?35:70)})();
+$("#interests").innerHTML=DATA.interests.map(x=>`<span class="chip">${esc(x)}</span>`).join("");
+$("#acts").innerHTML=DATA.acts.map(x=>`<span class="chip">${esc(x)}</span>`).join("");
+$("#duties").innerHTML=DATA.duties.map(([a,b])=>`<details><summary>${esc(a)}</summary><p>${esc(b)}</p></details>`).join("");
+{const im=new Image();im.onload=()=>{$("#mas").innerHTML="";$("#mas").style.border="0";$("#mas").append(im)};im.alt="MAS Holdings logo";im.src=DATA.masLogo}
+const lg=DATA.langs.map(([n,c,s],k)=>`<div class="lang" style="--w:${-(k%5)*.4}s"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="${c}"/><text x="24" y="31" text-anchor="middle" font-family="Quicksand,sans-serif" font-weight="700" font-size="${s.length>2?15:s.length>1?19:23}" fill="${n=="JavaScript"?"#222":"#fff"}">${s}</text></svg>${n}</div>`).join("");$("#langs").innerHTML=lg+lg;
+$("#skillGrid").innerHTML=Object.entries(DATA.skills).map(([k,v])=>`<div class="glass card rv"><h3>${esc(k)}</h3><div class="chips">${v.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("");
+$("#projGrid").innerHTML=DATA.projects.map(p=>`<div class="glass card rv"><h3>${esc(p.name)}</h3><p class="sub" style="margin:.4rem 0">${esc(p.desc)}</p>${p.tech.length?`<div class="chips">${p.tech.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>`:""}<div class="row">${p.github?`<a class="btn" target="_blank" rel="noopener" href="${esc(p.github)}">GitHub</a>`:""}${p.demo?`<a class="btn" target="_blank" rel="noopener" href="${esc(p.demo)}">Live demo</a>`:""}</div></div>`).join("");
+$("#certGrid").innerHTML=DATA.certs.map((c,k)=>`<div class="glass card rv"><img class="thumb" src="${esc(c.file)}" alt="${esc(c.title)} certificate" data-i="${k}" loading="lazy"><h3 style="font-size:1.05rem">${esc(c.title)}</h3><p class="sub" style="margin:.3rem 0 .8rem">${esc(c.org)} · ${esc(c.date)}</p><button class="btn" data-i="${k}">View certificate</button>${c.link?` <a class="btn" target="_blank" rel="noopener" href="${esc(c.link)}">Credential</a>`:""}</div>`).join("");
+$("#certGrid").onclick=e=>{const k=e.target.dataset.i;if(k==null)return;const c=DATA.certs[k];$("#dt").textContent=c.title;$("#di").src=c.file;$("#di").alt=c.title;$("#dlg").showModal()};
+$("#dx").onclick=()=>$("#dlg").close();$("#dlg").onclick=e=>{if(e.target.id=="dlg")e.target.close()};
+$("#eduList").innerHTML=DATA.education.map(e=>`<div class="glass rv"><small>${esc(e.y)}</small><h3>${esc(e.t)}</h3><p class="sub" style="margin:0">${esc(e.d)}</p></div>`).join("");
+/* reveal + active nav */
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&(e.target.classList.add("in"),io.unobserve(e.target))),{threshold:.12});document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll("a.l").forEach(a=>a.classList.toggle("on",a.dataset.id==e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});document.querySelectorAll("section").forEach(s=>so.observe(s));
+/* floating shaking AI bling */
+const gl=["🤖","✨","🧠","💻","⚡","💖","🦾","🌸","☁️","⌨️","🪄","🎀","✨","🤖","💫","🧬"];
+$("#bling").innerHTML=gl.map((g,k)=>`<i style="left:${(k*61+7)%96}%;top:${(k*37+11)%90}%;font-size:${18+(k*7)%22}px;opacity:${.35+(k%4)*.12};--d:${5+k%5}s;--s:${3+(k%6)}s;animation-delay:${-k}s">${g}</i>`).join("");
+/* sparkle click burst */
+addEventListener("pointerdown",e=>{if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;for(let k=0;k<8;k++){const s=document.createElement("span");s.className="spark";s.textContent=["✨","💖","⭐"][k%3];s.style.cssText=`left:${e.clientX}px;top:${e.clientY}px;--x:${Math.cos(k)*70}px;--y:${Math.sin(k)*70}px`;document.body.append(s);setTimeout(()=>s.remove(),800)}});
+/* contact form: validates, then opens the email app. Nothing is sent by the website. */
+$("#f").onsubmit=ev=>{ev.preventDefault();const f=new FormData(ev.target),v=k=>(f.get(k)||"").trim(),er={};
+ if(v("n").length<2)er.n="Please enter your name.";if(!/^\S+@\S+\.\S+$/.test(v("e")))er.e="Please enter a valid email address.";if(v("s").length<2)er.s="Please add a subject.";if(v("m").length<10)er.m="Please write at least 10 characters.";
+ document.querySelectorAll(".err").forEach(d=>d.textContent=er[d.dataset.e]||"");if(Object.keys(er).length)return;
+ location.href=`mailto:sinethyaliyanage02@gmail.com?subject=${encodeURIComponent(v("s"))}&body=${encodeURIComponent(v("m")+"\n\nFrom: "+v("n")+" ("+v("e")+")")}`};
+</script></body></html>
